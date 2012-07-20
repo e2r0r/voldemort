@@ -1,0 +1,10 @@
+prefix=/Users/dudu/Developer/github/zmq-ios-py/zeromq-2.2.0/build/iPhoneOS
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libzmq
+Description: 0MQ c++ library
+Version: 2.2.0
+Libs: -L${libdir} -lzmq
+Cflags: -I${includedir}
