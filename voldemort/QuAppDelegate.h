@@ -20,4 +20,5 @@
 @property (nonatomic, strong) ZMQContext *zmqContext;
 @property (nonatomic, strong) ZMQSocket *reqSocket;
 
+- (id) request:(NSString *)method willCallWithOptions:(NSDictionary *)aDict;
 @end

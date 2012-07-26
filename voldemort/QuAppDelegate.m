@@ -8,6 +8,8 @@
 
 #import "QuAppDelegate.h"
 #import "QuLoginController.h"
+#import "QuViewController.h"
+#import "MessagePack.h"
 
 @implementation QuAppDelegate
 
@@ -26,16 +28,20 @@
     [ZMQContext getZMQVersionMajor:&major minor:&minor patch:&patch];
     self.zmqContext = [[ZMQContext alloc] initWithIOThreads:1];
     self.reqSocket = [self.zmqContext socketWithType:ZMQ_REQ];
-    [self.reqSocket connectToEndpoint:[NSString stringWithFormat:@"tcp://%@:%d", @"10.0.2.11", 5566]];
+    [self.reqSocket connectToEndpoint:[NSString stringWithFormat:@"tcp://%@:%d", @"139.lab.im", 5566]];
 
-    NSLog(@"%@",self.reqSocket);
-    QuLoginController *root_controller = nil;
+    //NSLog(@"%@",self.reqSocket);
+    UIViewController *root_controller = nil;
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"device_email"]) {
-        root_controller = [[QuLoginController alloc] initWithNibName:@"QuLoginController" bundle:nil];
+        root_controller = [[QuViewController alloc] initWithNibName:@"QuViewController" bundle:nil];
     }
     else {
         root_controller = [[QuLoginController alloc] initWithNibName:@"QuLoginController" bundle:nil];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"device_token"]) {
+        self.devToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"device_token"];
     }
     
     self.window.rootViewController = root_controller;
@@ -94,4 +100,20 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma server function
+
+- (id)request:(NSString *)method willCallWithOptions:(NSDictionary *)aDict
+{
+    NSDictionary *broker = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:method,aDict, nil] forKeys:[NSArray arrayWithObjects:@"method",@"kwargs", nil]];
+        
+    
+    if ([self.reqSocket sendData:[broker messagePack] withFlags:ZMQ_NOBLOCK] == -1)
+    {
+        return [NSNumber numberWithInt:-1];
+    }
+    
+    NSData *reply = [self.reqSocket receiveDataWithFlags:0];
+    NSDictionary *reply_data = [reply messagePackParse];
+    return reply_data;    
+}
 @end

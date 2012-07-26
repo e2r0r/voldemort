@@ -13,9 +13,25 @@
 		8700997615B6B7E100B009D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8700997415B6B7E100B009D1 /* InfoPlist.strings */; };
 		8700997815B6B7E100B009D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8700997715B6B7E100B009D1 /* main.m */; };
 		8700997C15B6B7E100B009D1 /* QuAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8700997B15B6B7E100B009D1 /* QuAppDelegate.m */; };
+		871A8E7A15BD906B0005D255 /* dumbledore.py in Resources */ = {isa = PBXBuildFile; fileRef = 871A8E7915BD906B0005D255 /* dumbledore.py */; };
+		8772303D15BE9DB4001E4D8F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8772303C15BE9DB4001E4D8F /* QuartzCore.framework */; };
+		8772304715BE9DDC001E4D8F /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8772303F15BE9DDC001E4D8F /* blackArrow.png */; };
+		8772304815BE9DDC001E4D8F /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8772304015BE9DDC001E4D8F /* blackArrow@2x.png */; };
+		8772304915BE9DDC001E4D8F /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8772304115BE9DDC001E4D8F /* blueArrow.png */; };
+		8772304A15BE9DDC001E4D8F /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8772304215BE9DDC001E4D8F /* blueArrow@2x.png */; };
+		8772304B15BE9DDC001E4D8F /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8772304315BE9DDC001E4D8F /* grayArrow.png */; };
+		8772304C15BE9DDC001E4D8F /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8772304415BE9DDC001E4D8F /* grayArrow@2x.png */; };
+		8772304D15BE9DDC001E4D8F /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8772304515BE9DDC001E4D8F /* whiteArrow.png */; };
+		8772304E15BE9DDC001E4D8F /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8772304615BE9DDC001E4D8F /* whiteArrow@2x.png */; };
+		8772305215BE9F01001E4D8F /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772305115BE9F01001E4D8F /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8772305615BE9F29001E4D8F /* QuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8772305415BE9F29001E4D8F /* QuViewController.m */; };
+		8772305715BE9F29001E4D8F /* QuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8772305515BE9F29001E4D8F /* QuViewController.xib */; };
+		8772305C15BF0954001E4D8F /* EmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8772305B15BF0954001E4D8F /* EmptyCell.xib */; };
 		87B3818415B7BCE600DD607A /* main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87B3818315B7BCE600DD607A /* main.xib */; };
 		87B3818815B7BD2100DD607A /* QuLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B3818615B7BD2100DD607A /* QuLoginController.m */; };
 		87B3818915B7BD2100DD607A /* QuLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87B3818715B7BD2100DD607A /* QuLoginController.xib */; };
+		87EC20D415BFC2540032A21E /* QuAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EC20D215BFC2540032A21E /* QuAppController.m */; };
+		87EC20D515BFC2540032A21E /* QuAppController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87EC20D315BFC2540032A21E /* QuAppController.xib */; };
 		87ED08B015B84E00003E1127 /* MessagePackPacker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87ED089115B84E00003E1127 /* MessagePackPacker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		87ED08B115B84E00003E1127 /* MessagePackParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 87ED089315B84E00003E1127 /* MessagePackParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		87ED08B215B84E00003E1127 /* objectc.c in Sources */ = {isa = PBXBuildFile; fileRef = 87ED08A415B84E00003E1127 /* objectc.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -44,6 +60,22 @@
 		8700997915B6B7E100B009D1 /* voldemort-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "voldemort-Prefix.pch"; sourceTree = "<group>"; };
 		8700997A15B6B7E100B009D1 /* QuAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuAppDelegate.h; sourceTree = "<group>"; };
 		8700997B15B6B7E100B009D1 /* QuAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuAppDelegate.m; sourceTree = "<group>"; };
+		871A8E7915BD906B0005D255 /* dumbledore.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = dumbledore.py; sourceTree = "<group>"; };
+		8772303C15BE9DB4001E4D8F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8772303F15BE9DDC001E4D8F /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		8772304015BE9DDC001E4D8F /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		8772304115BE9DDC001E4D8F /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		8772304215BE9DDC001E4D8F /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		8772304315BE9DDC001E4D8F /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		8772304415BE9DDC001E4D8F /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		8772304515BE9DDC001E4D8F /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		8772304615BE9DDC001E4D8F /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		8772305015BE9F01001E4D8F /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		8772305115BE9F01001E4D8F /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		8772305315BE9F29001E4D8F /* QuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuViewController.h; sourceTree = "<group>"; };
+		8772305415BE9F29001E4D8F /* QuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuViewController.m; sourceTree = "<group>"; };
+		8772305515BE9F29001E4D8F /* QuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuViewController.xib; sourceTree = "<group>"; };
+		8772305B15BF0954001E4D8F /* EmptyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
 		879022B315B8ED4C00C07901 /* voldemort-server-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "voldemort-server-Info.plist"; sourceTree = "<group>"; };
 		879022B515B8ED4C00C07901 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		879022B715B8ED4C00C07901 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +86,9 @@
 		87B3818515B7BD2100DD607A /* QuLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuLoginController.h; sourceTree = "<group>"; };
 		87B3818615B7BD2100DD607A /* QuLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuLoginController.m; sourceTree = "<group>"; };
 		87B3818715B7BD2100DD607A /* QuLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuLoginController.xib; sourceTree = "<group>"; };
+		87EC20D115BFC2540032A21E /* QuAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuAppController.h; sourceTree = "<group>"; };
+		87EC20D215BFC2540032A21E /* QuAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuAppController.m; sourceTree = "<group>"; };
+		87EC20D315BFC2540032A21E /* QuAppController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuAppController.xib; sourceTree = "<group>"; };
 		87ED088F15B84E00003E1127 /* MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePack.h; sourceTree = "<group>"; };
 		87ED089015B84E00003E1127 /* MessagePackPacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePackPacker.h; sourceTree = "<group>"; };
 		87ED089115B84E00003E1127 /* MessagePackPacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagePackPacker.m; sourceTree = "<group>"; };
@@ -100,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8772303D15BE9DB4001E4D8F /* QuartzCore.framework in Frameworks */,
 				87F26A6615B8488A000D409C /* libzmq-fat.a in Frameworks */,
 				87F26A5115B82400000D409C /* libc++.dylib in Frameworks */,
 				8700996C15B6B7E100B009D1 /* UIKit.framework in Frameworks */,
@@ -114,6 +150,7 @@
 		8700995C15B6B7E100B009D1 = {
 			isa = PBXGroup;
 			children = (
+				8772304F15BE9DEA001E4D8F /* Resources */,
 				87ED088E15B84E00003E1127 /* msgpack */,
 				87F26A5D15B8486E000D409C /* zmq */,
 				87F26A4415B81865000D409C /* server */,
@@ -135,6 +172,7 @@
 		8700996A15B6B7E100B009D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8772303C15BE9DB4001E4D8F /* QuartzCore.framework */,
 				87F26A6515B8488A000D409C /* libzmq-fat.a */,
 				87F26A5015B82400000D409C /* libc++.dylib */,
 				8700996B15B6B7E100B009D1 /* UIKit.framework */,
@@ -147,6 +185,8 @@
 		8700997115B6B7E100B009D1 /* voldemort */ = {
 			isa = PBXGroup;
 			children = (
+				8772305015BE9F01001E4D8F /* EGORefreshTableHeaderView.h */,
+				8772305115BE9F01001E4D8F /* EGORefreshTableHeaderView.m */,
 				8700997A15B6B7E100B009D1 /* QuAppDelegate.h */,
 				8700997B15B6B7E100B009D1 /* QuAppDelegate.m */,
 				8700997215B6B7E100B009D1 /* Supporting Files */,
@@ -154,6 +194,13 @@
 				87B3818515B7BD2100DD607A /* QuLoginController.h */,
 				87B3818615B7BD2100DD607A /* QuLoginController.m */,
 				87B3818715B7BD2100DD607A /* QuLoginController.xib */,
+				87EC20D115BFC2540032A21E /* QuAppController.h */,
+				87EC20D215BFC2540032A21E /* QuAppController.m */,
+				87EC20D315BFC2540032A21E /* QuAppController.xib */,
+				8772305315BE9F29001E4D8F /* QuViewController.h */,
+				8772305415BE9F29001E4D8F /* QuViewController.m */,
+				8772305515BE9F29001E4D8F /* QuViewController.xib */,
+				8772305B15BF0954001E4D8F /* EmptyCell.xib */,
 			);
 			path = voldemort;
 			sourceTree = "<group>";
@@ -167,6 +214,21 @@
 				8700997915B6B7E100B009D1 /* voldemort-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8772304F15BE9DEA001E4D8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8772303F15BE9DDC001E4D8F /* blackArrow.png */,
+				8772304015BE9DDC001E4D8F /* blackArrow@2x.png */,
+				8772304115BE9DDC001E4D8F /* blueArrow.png */,
+				8772304215BE9DDC001E4D8F /* blueArrow@2x.png */,
+				8772304315BE9DDC001E4D8F /* grayArrow.png */,
+				8772304415BE9DDC001E4D8F /* grayArrow@2x.png */,
+				8772304515BE9DDC001E4D8F /* whiteArrow.png */,
+				8772304615BE9DDC001E4D8F /* whiteArrow@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		879022B115B8ED4C00C07901 /* voldemort-server */ = {
@@ -248,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				87F26A4C15B82385000D409C /* user.py */,
+				871A8E7915BD906B0005D255 /* dumbledore.py */,
 			);
 			path = server;
 			sourceTree = "<group>";
@@ -320,6 +383,18 @@
 				87B3818415B7BCE600DD607A /* main.xib in Resources */,
 				87B3818915B7BD2100DD607A /* QuLoginController.xib in Resources */,
 				87ED08BA15B84E00003E1127 /* readme.md in Resources */,
+				871A8E7A15BD906B0005D255 /* dumbledore.py in Resources */,
+				8772304715BE9DDC001E4D8F /* blackArrow.png in Resources */,
+				8772304815BE9DDC001E4D8F /* blackArrow@2x.png in Resources */,
+				8772304915BE9DDC001E4D8F /* blueArrow.png in Resources */,
+				8772304A15BE9DDC001E4D8F /* blueArrow@2x.png in Resources */,
+				8772304B15BE9DDC001E4D8F /* grayArrow.png in Resources */,
+				8772304C15BE9DDC001E4D8F /* grayArrow@2x.png in Resources */,
+				8772304D15BE9DDC001E4D8F /* whiteArrow.png in Resources */,
+				8772304E15BE9DDC001E4D8F /* whiteArrow@2x.png in Resources */,
+				8772305715BE9F29001E4D8F /* QuViewController.xib in Resources */,
+				8772305C15BF0954001E4D8F /* EmptyCell.xib in Resources */,
+				87EC20D515BFC2540032A21E /* QuAppController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +420,9 @@
 				87ED08B715B84E00003E1127 /* NSArray+MessagePack.m in Sources */,
 				87ED08B815B84E00003E1127 /* NSData+MessagePack.m in Sources */,
 				87ED08B915B84E00003E1127 /* NSDictionary+MessagePack.m in Sources */,
+				8772305215BE9F01001E4D8F /* EGORefreshTableHeaderView.m in Sources */,
+				8772305615BE9F29001E4D8F /* QuViewController.m in Sources */,
+				87EC20D415BFC2540032A21E /* QuAppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

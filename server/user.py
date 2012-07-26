@@ -32,6 +32,10 @@ def register(sock):
         else:
             r.hset(_data['email'],_data['device'],_data['device_nick'])
             sock.send("successful!");
+            
+def cell():
+    """docstring for cell"""
+    pass
         
 server = Spawn(register,socket)
 server.join()

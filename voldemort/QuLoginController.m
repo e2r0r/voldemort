@@ -8,7 +8,7 @@
 
 #import "QuLoginController.h"
 #import "QuAppDelegate.h"
-#import "MessagePack.h"
+#import "QuViewController.h"
 
 @interface QuLoginController ()
 
@@ -30,10 +30,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"device_token"];
+    QuAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     self.device_label.lineBreakMode = UILineBreakModeWordWrap; 
     self.device_label.numberOfLines = 0;
-    self.device_label.text = str;
+    self.device_label.text = delegate.devToken;
     
     self.user_email.delegate = self;
 }
@@ -70,18 +70,30 @@
     else {
         QuAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
         
-        NSDictionary *submit_data = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:delegate.devToken,self.user_email.text,self.device_nickname.text, nil] forKeys:[NSArray arrayWithObjects:@"device",@"email",@"device_nick", nil]];
-        NSData *msgData = [submit_data messagePack];
+        NSDictionary *submit_data = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:delegate.devToken,self.user_email.text,self.device_nickname.text, nil] forKeys:[NSArray arrayWithObjects:@"device",@"email",@"nick", nil]];
         
-        
-        if ([delegate.reqSocket sendData:msgData withFlags:ZMQ_NOBLOCK] == -1)
-        {
-            self.res.text = @"Network may be disconnected!";
+//        NSDictionary *request_data = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@"register",submit_data, nil] forKeys:[NSArray arrayWithObjects:@"method",@"kwargs", nil]];
+//        
+//        NSData *msgData = [request_data messagePack];
+//        
+//        
+//        if ([delegate.reqSocket sendData:msgData withFlags:ZMQ_NOBLOCK] == -1)
+//        {
+//            self.res.text = @"Network may be disconnected!";
+//        }
+//        
+//        NSData *reply = [delegate.reqSocket receiveDataWithFlags:0];
+//        NSLog(@"%@",[reply messagePackParse]);
+//        NSString *replyString = [[NSString alloc] initWithData:reply encoding:NSUTF8StringEncoding];
+//        self.res.text = replyString;
+        NSDictionary *replyString = [delegate request:@"register" willCallWithOptions:submit_data];
+        //NSLog(@"%@",replyString);
+        self.res.text = [replyString objectForKey:@"data"];
+        if ([[replyString objectForKey:@"code"] intValue] == 1) {
+            [[NSUserDefaults standardUserDefaults] setObject:self.user_email.text forKey:@"device_email"];
+            QuViewController *next = [[QuViewController alloc] initWithNibName:@"QuViewController" bundle:nil];
+            [self presentModalViewController:next animated:YES];
         }
-        
-        NSData *reply = [delegate.reqSocket receiveDataWithFlags:0];
-        NSString *replyString = [[NSString alloc] initWithData:reply encoding:NSUTF8StringEncoding];
-        self.res.text = replyString;
     }
     
 
